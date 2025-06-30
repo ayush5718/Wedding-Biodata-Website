@@ -12,14 +12,16 @@ const Contact = () => {
       name: 'Mr. Devendra Nath Tiwari',
       phone: '+91 98765 43210',
       email: 'devendra.tiwari@email.com',
-      icon: '👨‍💼'
+      icon: '👨‍💼',
+      image: 'https://i.ibb.co/Y4myhdGW/Chat-GPT-Image-Jun-30-2025-06-21-48-PM.png'
     },
     {
       person: 'Mother',
       name: 'Mrs. Mousumi Tiwari',
       phone: '+91 98765 43211',
       email: 'mousumi.tiwari@email.com',
-      icon: '👩‍💼'
+      icon: '👩‍💼',
+      image: 'https://i.ibb.co/YB61kQkH/Whats-App-Image-2025-06-30-at-17-14-57-f7de0b73.jpg'
     }
   ];
 
@@ -31,7 +33,7 @@ const Contact = () => {
     },
     {
       label: 'Preferred Language',
-      value: 'Hindi / English',
+      value: 'Hindi / English / Bengali',
       icon: '🗣️'
     },
     {
@@ -85,13 +87,13 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6">
-            Get In Touch
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+            Get In <span className="text-gradient-rose">Touch</span>
           </h2>
-          <div className="w-24 sm:w-32 h-1 bg-gradient-rose mx-auto mb-6 sm:mb-8 rounded-full"></div>
-          <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4">
+          <div className="w-32 h-1 bg-gradient-rose mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             We welcome inquiries from interested families. Please feel free to reach out to us.
           </p>
         </motion.div>
@@ -115,9 +117,19 @@ const Contact = () => {
               >
                 <div className="flex items-start space-x-4 sm:space-x-6">
                   <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-rose rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl glow-accent group-hover:animate-pulse">
-                      {contact.icon}
-                    </div>
+                    {contact.image ? (
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden ring-2 ring-gradient-rose glow-accent group-hover:ring-4 transition-all duration-300">
+                        <img
+                          src={contact.image}
+                          alt={contact.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-rose rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl glow-accent group-hover:animate-pulse">
+                        {contact.icon}
+                      </div>
+                    )}
                     <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-primary rounded-full animate-bounce opacity-70"></div>
                   </div>
                   <div className="flex-1 min-w-0">

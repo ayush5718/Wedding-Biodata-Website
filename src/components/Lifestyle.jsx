@@ -7,12 +7,12 @@ const Lifestyle = () => {
   const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
   const hobbies = [
-    {
-      icon: '📚',
-      title: 'Reading',
-      description: 'Love reading novels, especially fiction and self-help books',
-      color: 'from-blue-400 to-blue-600'
-    },
+   {
+  icon: '🎨',
+  title: 'Art and Craft',
+  description: 'Enjoy creating handmade crafts and exploring various art forms',
+  color: 'from-pink-400 to-red-600'
+},
     {
       icon: '🍳',
       title: 'Cooking',

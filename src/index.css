@@ -121,6 +121,15 @@ body {
   background-clip: text;
 }
 
+.text-gradient-rose {
+  background: var(--gradient-rose);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
 .bg-gradient-primary {
   background: var(--gradient-primary);
 }

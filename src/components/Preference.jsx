@@ -14,7 +14,8 @@ const Preference = () => {
         { label: 'Age Range', value: '28-35 years', icon: '🎂' },
         { label: 'Height', value: '5\'6" and above', icon: '📏' },
         { label: 'Marital Status', value: 'Unmarried', icon: '💍' },
-        { label: 'Religion', value: 'Hindu', icon: '🕉️' }
+        { label: 'Religion', value: 'Hindu', icon: '🕉️' },
+        { label: 'Caste', value: 'Brahmin', icon: '🙏' }
       ]
     },
     {

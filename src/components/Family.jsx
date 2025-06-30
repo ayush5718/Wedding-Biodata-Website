@@ -70,13 +70,13 @@ const Family = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6">
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
             My <span className="text-gradient-rose">Family</span>
           </h2>
-          <div className="w-24 sm:w-32 h-1 bg-gradient-rose mx-auto mb-6 sm:mb-8 rounded-full"></div>
-          <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4">
+          <div className="w-32 h-1 bg-gradient-rose mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             A loving and supportive family that has shaped who I am today
           </p>
         </motion.div>
