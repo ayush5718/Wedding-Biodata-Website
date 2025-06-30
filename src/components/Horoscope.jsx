@@ -122,7 +122,7 @@ const Horoscope = () => {
             animate={isInView ? "visible" : "hidden"}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            <h3 className="text-2xl font-bold text-white text-center">
               Astrological Insights
             </h3>
             {additionalInfo.map((info, index) => (
