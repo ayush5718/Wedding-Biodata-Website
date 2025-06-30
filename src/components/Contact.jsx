@@ -50,7 +50,7 @@ const Contact = () => {
 
   const socialLinks = [
     { platform: 'WhatsApp', icon: '💬', color: 'from-green-400 to-green-600',link: 'https://wa.me/919732552082' },// replace with actual WhatsApp number },
-    { platform: 'Email', icon: '📧', color: 'from-blue-400 to-blue-600',link: 'mailto:devendra.tiwari@email.com' },
+    // { platform: 'Email', icon: '📧', color: 'from-blue-400 to-blue-600',link: 'mailto:devendra.tiwari@email.com' },
     { platform: 'Phone', icon: '📞', color: 'from-purple-400 to-purple-600' , link: 'tel:+919876543210'}
   ];
 
@@ -140,10 +140,10 @@ const Contact = () => {
                         <span className="text-lg sm:text-xl mr-3 sm:mr-4 flex-shrink-0">📞</span>
                         <span className="text-gray-700 font-medium text-sm sm:text-base break-all">{contact.phone}</span>
                       </div>
-                      <div className="flex items-center p-2 sm:p-3 glass rounded-lg sm:rounded-xl">
+                      {/**<div className="flex items-center p-2 sm:p-3 glass rounded-lg sm:rounded-xl">
                         <span className="text-lg sm:text-xl mr-3 sm:mr-4 flex-shrink-0">📧</span>
                         <span className="text-gray-700 font-medium text-sm sm:text-base break-all">{contact.email}</span>
-                      </div>
+                      </div> **/ }
                     </div>
                   </div>
                 </div>
