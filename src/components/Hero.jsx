@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Glassmorphism Overlay */}
       <div className="absolute inset-0 glass-dark"></div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,9 +30,9 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
+            className="mb-8 sm:mb-12"
           >
-            <div className="relative w-56 h-56 mx-auto">
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 mx-auto">
               {/* Glowing Ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-primary p-1 glow animate-pulse">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white p-2">
@@ -44,8 +44,8 @@ const Hero = () => {
                 </div>
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-accent rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-rose rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-accent rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-rose rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
             </div>
           </motion.div>
 
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-6xl md:text-8xl font-display font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-bold text-white mb-4 sm:mb-6"
           >
             {/* Hi, I'm{' '} */}
             <span className="text-gradient-accent block md:inline">
@@ -78,10 +78,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="glass rounded-3xl p-8 mb-10 max-w-4xl mx-auto"
+            className="glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10 max-w-4xl mx-auto"
           >
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-              Welcome to my profile. I am a <span className="text-gradient-accent font-semibold">23-year-old engineer</span> working at Tech Mahindra.
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
+              Welcome to my profile. I am a <span className="text-gradient-accent font-semibold">24-year-old engineer</span> working at Tech Mahindra.
               I believe in the beauty of <span className="text-gradient-primary font-semibold">traditional values</span> combined with
               <span className="text-gradient-accent font-semibold"> modern aspirations</span>.
               Let's embark on this beautiful journey of life together.
@@ -93,17 +93,17 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
           >
             <motion.button
               onClick={scrollToAbout}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary text-lg px-8 py-4 rounded-2xl font-semibold transition-bounce hover:glow group"
+              className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold transition-bounce hover:glow group w-full sm:w-auto"
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 Explore My Profile
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
@@ -112,10 +112,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-accent text-lg px-8 py-4 rounded-2xl font-semibold transition-bounce hover:glow-accent group"
+              className="btn-accent text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold transition-bounce hover:glow-accent group w-full sm:w-auto"
             >
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 Contact Family

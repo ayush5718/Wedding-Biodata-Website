@@ -87,6 +87,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
 }
 
 body {
@@ -95,6 +97,9 @@ body {
   color: var(--neutral-800);
   background: var(--gradient-hero);
   min-height: 100vh;
+  overflow-x: hidden;
+  /* Prevent zoom on input focus on iOS */
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Modern Utility Classes */
@@ -269,6 +274,44 @@ body {
 /* Glow Effect */
 .glow {
   box-shadow: var(--shadow-glow);
+}
+
+.glow-accent {
+  box-shadow: var(--shadow-accent);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  /* Reduce motion for better performance on mobile */
+  .animate-float {
+    animation-duration: 4s;
+  }
+
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better text readability on small screens */
+  .text-gradient-primary,
+  .text-gradient-accent,
+  .text-gradient-rose {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Ensure cards don't get too small */
+  .modern-card {
+    min-height: auto;
+  }
+
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .glow-accent {

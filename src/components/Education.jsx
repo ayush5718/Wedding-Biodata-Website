@@ -8,11 +8,11 @@ const Education = () => {
 
   const educationData = [
     {
-      year: '2019-2023',
+      year: '2021-2025',
       degree: 'Bachelor of Technology (B.Tech)',
-      institution: 'Engineering College',
-      grade: 'First Class',
-      stream: 'Engineering',
+      institution: 'Techno International Newtown',
+      grade: '8+',
+      stream: 'Information Technology',
       icon: '🎓'
     }
   ];
@@ -20,7 +20,7 @@ const Education = () => {
   const currentProfession = {
     position: 'Associate Engineer',
     company: 'Tech Mahindra',
-    startYear: '2023',
+    startYear: '2024',
     description: 'Working as an Associate Engineer, contributing to various technical projects and gaining valuable industry experience',
     responsibilities: [
       'Working on technical projects and solutions',

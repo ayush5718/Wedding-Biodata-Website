@@ -88,25 +88,25 @@ const Preference = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-hero bg-pattern relative overflow-hidden" ref={ref}>
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-hero bg-pattern relative overflow-hidden" ref={ref}>
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-28 right-28 w-88 h-88 bg-gradient-primary rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float"></div>
         <div className="absolute bottom-28 left-28 w-96 h-96 bg-gradient-accent rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '2.5s'}}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6">
             Partner <span className="text-gradient-primary">Preferences</span>
           </h2>
-          <div className="w-32 h-1 bg-gradient-primary mx-auto mb-8 rounded-full"></div>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 sm:w-32 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 rounded-full"></div>
+          <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4">
             Looking for a life partner who shares similar values and aspirations
           </p>
         </motion.div>
@@ -116,30 +116,30 @@ const Preference = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 gap-8 mb-16"
+          className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 lg:mb-16"
         >
           {preferences.map((category, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
               whileHover={{ scale: 1.03, y: -8 }}
-              className="modern-card p-8 group"
+              className="modern-card p-4 sm:p-6 lg:p-8 group"
             >
-              <div className="flex items-center mb-8">
-                <div className="relative w-16 h-16 mr-6">
+              <div className="flex items-center mb-6 lg:mb-8">
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mr-4 sm:mr-6 flex-shrink-0">
                   <div className="absolute inset-0 bg-gradient-primary rounded-full p-1 glow group-hover:animate-pulse">
-                    <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-2xl">
+                    <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-lg sm:text-xl lg:text-2xl">
                       {category.icon}
                     </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-5 h-5 bg-gradient-accent rounded-full animate-bounce opacity-70"></div>
+                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-4 h-4 sm:w-5 sm:h-5 bg-gradient-accent rounded-full animate-bounce opacity-70"></div>
                 </div>
-                <h3 className="text-2xl font-display font-bold text-gray-800 group-hover:text-gradient-primary transition-all duration-300">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-display font-bold text-gray-800 group-hover:text-gradient-primary transition-all duration-300 leading-tight">
                   {category.category}
                 </h3>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-3 sm:space-y-4 lg:space-y-5">
                 {category.items.map((item, itemIndex) => (
                   <motion.div
                     key={itemIndex}
@@ -147,13 +147,13 @@ const Preference = () => {
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.5, delay: 0.3 + itemIndex * 0.1 }}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center justify-between p-4 glass rounded-2xl hover:bg-white/20 transition-all duration-300"
+                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 glass rounded-xl lg:rounded-2xl hover:bg-white/20 transition-all duration-300 gap-2 sm:gap-0"
                   >
-                    <div className="flex items-center">
-                      <span className="text-2xl mr-4">{item.icon}</span>
-                      <span className="font-medium text-gray-700 text-lg">{item.label}:</span>
+                    <div className="flex items-center min-w-0">
+                      <span className="text-lg sm:text-xl lg:text-2xl mr-3 sm:mr-4 flex-shrink-0">{item.icon}</span>
+                      <span className="font-medium text-gray-700 text-sm sm:text-base lg:text-lg truncate">{item.label}:</span>
                     </div>
-                    <span className="text-gray-900 font-bold">
+                    <span className="text-gray-900 font-bold text-sm sm:text-base lg:text-base ml-8 sm:ml-0 break-words">
                       {item.value}
                     </span>
                   </motion.div>

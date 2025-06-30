@@ -8,7 +8,7 @@ const About = () => {
 
   const personalDetails = [
     { label: 'Full Name', value: 'Anjali Tiwari' },
-    { label: 'Age', value: '23 Years' },
+    { label: 'Age', value: '24 Years' },
     { label: 'Profession', value: 'Associate Engineer at Tech Mahindra' },
     { label: 'Location', value: 'Jhargram, West Bengal' },
     { label: 'Education', value: 'B.Tech Engineering' },
@@ -59,17 +59,17 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Photo Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             <div className="relative inline-block">
               {/* Main Image with Glassmorphism Frame */}
-              <div className="relative w-80 h-96 mx-auto lg:mx-0">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-88 lg:w-80 lg:h-96 mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-gradient-primary rounded-3xl p-1 glow animate-pulse">
                   <div className="w-full h-full rounded-3xl overflow-hidden bg-white p-2">
                     <img
@@ -93,23 +93,23 @@ const About = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="space-y-8"
+            className="space-y-6 lg:space-y-8 order-1 lg:order-2"
           >
             <motion.div
               variants={itemVariants}
-              className="modern-card p-8"
+              className="modern-card p-4 sm:p-6 lg:p-8"
             >
-              <h3 className="text-3xl font-display font-bold text-gray-800 mb-8">Personal Details</h3>
-              <div className="grid gap-4 mb-8">
+              <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-800 mb-6 lg:mb-8">Personal Details</h3>
+              <div className="grid gap-3 lg:gap-4 mb-6 lg:mb-8">
                 {personalDetails.map((detail, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
                     whileHover={{ scale: 1.02 }}
-                    className="flex justify-between items-center p-4 glass rounded-2xl hover:bg-white/20 transition-all duration-300"
+                    className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 glass rounded-xl lg:rounded-2xl hover:bg-white/20 transition-all duration-300 gap-1 sm:gap-0"
                   >
-                    <span className="font-medium text-gray-700">{detail.label}:</span>
-                    <span className="font-bold text-gray-900">{detail.value}</span>
+                    <span className="font-medium text-gray-700 text-sm sm:text-base">{detail.label}:</span>
+                    <span className="font-bold text-gray-900 text-sm sm:text-base">{detail.value}</span>
                   </motion.div>
                 ))}
               </div>
@@ -117,18 +117,18 @@ const About = () => {
 
             <motion.div
               variants={itemVariants}
-              className="modern-card p-8"
+              className="modern-card p-4 sm:p-6 lg:p-8"
             >
-              <h3 className="text-2xl font-display font-bold text-gray-800 mb-6 flex items-center gap-3">
-                <span className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-800 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
+                <span className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-primary rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </span>
                 About Myself
               </h3>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                I am a <span className="text-gradient-accent font-semibold">23-year-old Associate Engineer</span> at Tech Mahindra, originally from Jhargram.
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">
+                I am a <span className="text-gradient-accent font-semibold">24-year-old Associate Engineer</span> at Tech Mahindra, originally from Jhargram.
                 I am a caring, family-oriented person who believes in maintaining a balance between
                 <span className="text-gradient-primary font-semibold"> tradition and modernity</span>. I value honesty, respect, and understanding in relationships.
                 I enjoy spending quality time with my family, which includes my parents and two sisters.
