@@ -10,7 +10,7 @@ const Contact = () => {
     {
       person: 'Father',
       name: 'Mr. Devendra Nath Tiwari',
-      phone: '+91 98765 43210',
+      phone: '+91 9732552082',
       email: 'devendra.tiwari@email.com',
       icon: '👨‍💼',
       image: 'https://i.ibb.co/Y4myhdGW/Chat-GPT-Image-Jun-30-2025-06-21-48-PM.png'
@@ -18,7 +18,7 @@ const Contact = () => {
     {
       person: 'Mother',
       name: 'Mrs. Mousumi Tiwari',
-      phone: '+91 98765 43211',
+      phone: '+91 9609424614',
       email: 'mousumi.tiwari@email.com',
       icon: '👩‍💼',
       image: 'https://i.ibb.co/YB61kQkH/Whats-App-Image-2025-06-30-at-17-14-57-f7de0b73.jpg'
@@ -33,7 +33,7 @@ const Contact = () => {
     },
     {
       label: 'Preferred Language',
-      value: 'Hindi / English / Bengali',
+      value: 'Hindi / Bengali',
       icon: '🗣️'
     },
     {
