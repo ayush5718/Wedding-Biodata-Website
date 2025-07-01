@@ -37,12 +37,12 @@ const Lifestyle = () => {
       description: 'Love exploring new places and experiencing different cultures',
       color: 'from-indigo-400 to-purple-500'
     },
-    {
-      icon: '🎨',
-      title: 'Art & Crafts',
-      description: 'Enjoy painting, sketching, and DIY home decoration',
-      color: 'from-pink-400 to-rose-500'
-    }
+    // {
+    //   icon: '🎨',
+    //   title: 'Art & Crafts',
+    //   description: 'Enjoy painting, sketching, and DIY home decoration',
+    //   color: 'from-pink-400 to-rose-500'
+    // }
   ];
 
   const lifestyle = [

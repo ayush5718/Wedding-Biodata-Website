@@ -10,19 +10,19 @@ const Contact = () => {
     {
       person: 'Father',
       name: 'Mr. Devendra Nath Tiwari',
-      phone: '+91 9732552082',
+      phone: '+91 7908514510',
       email: 'devendra.tiwari@email.com',
       icon: '👨‍💼',
       image: 'https://i.ibb.co/Y4myhdGW/Chat-GPT-Image-Jun-30-2025-06-21-48-PM.png'
     },
-    {
-      person: 'Mother',
-      name: 'Mrs. Mousumi Tiwari',
-      phone: '+91 9609424614',
-      email: 'mousumi.tiwari@email.com',
-      icon: '👩‍💼',
-      image: 'https://i.ibb.co/YB61kQkH/Whats-App-Image-2025-06-30-at-17-14-57-f7de0b73.jpg'
-    }
+    // {
+    //   person: 'Mother',
+    //   name: 'Mrs. Mousumi Tiwari',
+    //   phone: '+91 9609424614',
+    //   email: 'mousumi.tiwari@email.com',
+    //   icon: '👩‍💼',
+    //   image: 'https://i.ibb.co/YB61kQkH/Whats-App-Image-2025-06-30-at-17-14-57-f7de0b73.jpg'
+    // }
   ];
 
   const additionalInfo = [
